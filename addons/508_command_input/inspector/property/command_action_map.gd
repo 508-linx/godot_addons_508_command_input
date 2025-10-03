@@ -34,7 +34,7 @@ func _ready():
 				var code_bit := 0b0;
 				for node: CheckBox in slot.get_children():
 					if node.button_pressed:
-						if node.get_index() == idx:
+						if lookup_property != 'command_action' and node.get_index() == idx:
 							node.button_pressed = false;
 							continue;
 						code_bit += pow( 2, node.get_index() );
